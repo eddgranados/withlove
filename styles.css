@@ -1,0 +1,734 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #555;
+    line-height: 1.6;
+    background-color: #fff9f9;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.heart-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23ffebee" d="M50 30c10-15 30-10 30 5 0 15-20 25-30 35-10-10-30-20-30-35 0-15 20-20 30-5z"/></svg>');
+    background-size: 100px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+h1, h2, h3 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color: #d23669;
+}
+
+.highlight {
+    color: #ff4757;
+}
+
+.name-highlight {
+    color: #d23669;
+    font-weight: bold;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #888;
+    font-style: italic;
+}
+
+/* Header */
+.romantic-header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, rgba(255,182,193,0.2) 0%, rgba(255,105,180,0.1) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.romantic-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23d23669" opacity="0.05" d="M50 30c10-15 30-10 30 5 0 15-20 25-30 35-10-10-30-20-30-35 0-15 20-20 30-5z"/></svg>');
+    background-size: 80px;
+    z-index: -1;
+}
+
+.romantic-header h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: #888;
+}
+
+.rose-decoration {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #d23669;
+}
+
+.rose-decoration i {
+    margin: 0 15px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.rose-decoration i:nth-child(2) {
+    animation-delay: 0.5s;
+    color: #ff6b81;
+}
+
+.rose-decoration i:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Navegación */
+.romantic-nav {
+    background-color: #fff;
+    box-shadow: 0 2px 15px rgba(210, 54, 105, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.romantic-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px 0;
+}
+
+.romantic-nav li {
+    margin: 0 20px;
+}
+
+.romantic-nav a {
+    text-decoration: none;
+    color: #d23669;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.romantic-nav a i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.romantic-nav a:hover {
+    color: #ff4757;
+    transform: translateY(-2px);
+}
+
+/* Sección de Dedicatoria */
+.dedication-section {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 30px auto;
+    box-shadow: 0 5px 25px rgba(210, 54, 105, 0.1);
+}
+
+.dedication-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.dedication-section h2 i {
+    margin-right: 15px;
+    color: #ff6b81;
+}
+
+.letter-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.letter-paper {
+    max-width: 700px;
+    background-color: #fff9f9;
+    border: 1px solid #ffccd5;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.letter-paper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%);
+}
+
+.letter-paper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to top, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%);
+}
+
+.letter-date {
+    text-align: right;
+    color: #888;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.letter-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: #d23669;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Sección de Recuerdos */
+.memories-section {
+    background-color: #fff5f7;
+    padding: 60px 0;
+}
+
+.memories-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.memories-section h2 i {
+    margin-right: 15px;
+    color: #ff6b81;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.memory-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.memory-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(210, 54, 105, 0.2);
+}
+
+.memory-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.memory-date {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(210, 54, 105, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.memory-content {
+    padding: 20px;
+}
+
+.memory-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #d23669;
+}
+
+.memory-content p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Sección de Razones */
+.reasons-section {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.reasons-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.reasons-section h2 i {
+    margin-right: 15px;
+    color: #ff6b81;
+}
+
+.reasons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.reason-box {
+    background-color: #fff9f9;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #ffccd5;
+    transition: transform 0.3s ease;
+}
+
+.reason-box:hover {
+    transform: scale(1.05);
+    background-color: #fff5f5;
+}
+
+.reason-icon {
+    font-size: 2.5rem;
+    color: #d23669;
+    margin-bottom: 20px;
+}
+
+.reason-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.reason-box p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Sección de Futuro */
+.future-section {
+    background-color: #fff5f7;
+    padding: 60px 0;
+}
+
+.future-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.future-section h2 i {
+    margin-right: 15px;
+    color: #ff6b81;
+}
+
+.future-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.future-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: #ffccd5;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-date {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d23669;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.timeline-content {
+    width: calc(50% - 40px);
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.timeline-content::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::after {
+    right: 100%;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-right: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-content::after {
+    left: 100%;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent white;
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #d23669;
+}
+
+.timeline-content p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Footer */
+.romantic-footer {
+    background-color: #d23669;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.footer-content p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.footer-quote {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px) scale(1.2);
+    color: #ffccd5;
+}
+
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Botón de Música */
+.music-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #d23669;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 3px 15px rgba(210, 54, 105, 0.5);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.music-button:hover {
+    transform: scale(1.1);
+    background-color: #ff4757;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .romantic-header h1 {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .romantic-nav ul {
+        flex-wrap: wrap;
+    }
+    
+    .romantic-nav li {
+        margin: 5px 10px;
+    }
+    
+    .memory-grid, .reasons-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .future-timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-date {
+        left: 20px;
+        transform: none;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 70px);
+        margin-left: 70px !important;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content::after,
+    .timeline-item:nth-child(even) .timeline-content::after {
+        left: -15px;
+        right: auto;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+}
+
+@media (max-width: 480px) {
+    .romantic-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .letter-paper {
+        padding: 20px;
+    }
+    
+    .dedication-section h2,
+    .memories-section h2,
+    .reasons-section h2,
+    .future-section h2 {
+        font-size: 2rem;
+    }
+
+    /* Estilo para el reproductor de YouTube (oculto) */
+.youtube-player {
+    position: fixed;
+    bottom: -100px;
+    right: -100px;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    z-index: -1000;
+    pointer-events: none;
+}
+
+/* Ajustes para el botón de música */
+.music-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #d23669;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 3px 15px rgba(210, 54, 105, 0.5);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.music-button:hover {
+    transform: scale(1.1);
+    background-color: #ff4757;
+}
+
+.memory-image {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Reemplaza o añade estos estilos a tu archivo CSS */
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    padding: 0 10px;
+}
+
+.memory-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.memory-image {
+    height: 200px;
+    min-height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.memory-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.memory-content h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    margin-bottom: 10px;
+    color: #d23669;
+    line-height: 1.3;
+}
+
+.memory-content p {
+    color: #666;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+    line-height: 1.5;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.memory-date {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(210, 54, 105, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .memory-image {
+        height: 150px;
+        min-height: 150px;
+    }
+    
+    .memory-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .memory-image {
+        height: 120px;
+        min-height: 120px;
+    }
+    
+    .memory-date {
+        top: 10px;
+        right: 10px;
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+}
+}
